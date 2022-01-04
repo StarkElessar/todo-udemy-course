@@ -1,0 +1,22 @@
+@import '../../scss/vars';
+
+.todo-list {
+  width: 100%;
+  max-width: 1160px + $safe-margin * 2;
+  padding-top: 32px;
+  margin-bottom: 16px;
+  list-style: none;
+
+  &__item {
+    font-size: 18px;
+    padding: 8px 4px;
+    transition: background-color 280ms linear;
+    &:not(:last-child) {
+      margin-bottom: 0px;
+    }
+
+    &:hover {
+      background-color: rgba($header-color, 0.1);
+    }
+  }
+}

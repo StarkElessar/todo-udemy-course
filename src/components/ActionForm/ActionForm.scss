@@ -1,0 +1,32 @@
+@import '../../scss/vars';
+
+.action-form {
+  &__input {
+    flex: 0 1 85%;
+    height: 40px;
+    font-size: 24px;
+    padding: 0 8px;
+    border: 1px solid $header-color;
+    border-radius: 4px;
+  }
+
+  &__btn {
+    padding: 0 16px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 0;
+    border-radius: 4px;
+    background-color: $header-color;
+    transition: 250ms linear;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #444;
+      box-shadow: 0 0 3px 0 rgba($color: #000, $alpha: 0.2),
+                  0 0 8px 0 rgba($color: #000, $alpha: 0.2);
+    }
+  }
+}

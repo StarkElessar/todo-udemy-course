@@ -1,0 +1,38 @@
+@import '../../scss/vars';
+
+.btn {
+  &-group {
+    display: flex;
+  }
+  &-filter {
+    font-weight: 400;
+    font-family: 'Montserrat';
+    display: inline-block;
+    height: 32px;
+    font-size: 16px;
+    padding: 0 16px;
+    border: 1px solid lighten(#000, 90%);
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 250ms linear;
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+    
+    &:hover {
+      color: #fff;
+      border: 1px solid #444;
+      background-color: #444;
+      box-shadow: 0 0 8px rgba($color: #000, $alpha: 0.2);
+    }
+    &:focus {
+      color: #fff;
+      border: 1px solid $header-color;
+      background-color: $header-color;
+      box-shadow: 0 0 12px rgba($color: #000, $alpha: 0.3);
+    }
+
+  }
+}

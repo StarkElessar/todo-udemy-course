@@ -1,0 +1,25 @@
+.todo-list {
+  &__title {
+    cursor: pointer;
+
+  }
+  &__group {
+    display: flex;
+    align-items: center;
+    &.done {
+      .todo-list__title {
+        text-decoration: line-through;
+      }
+    }
+  }
+}  
+
+.important {
+  color: #ff6347;
+  font-weight: 700;
+}
+
+.not-important {
+  color: #000;
+  font-weight: 400;
+}

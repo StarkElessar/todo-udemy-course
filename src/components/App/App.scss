@@ -1,0 +1,21 @@
+@import './../../scss/vars';
+
+.app{
+  &__wrapper { 
+    width: 100%;
+    height: 100%;
+    padding-top: $header-height;
+  }
+}
+
+.action-group {
+  width: 100%;
+  height: 32px;
+  max-width: 1160px + $safe-margin * 2;
+  padding: 0 $safe-margin;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
