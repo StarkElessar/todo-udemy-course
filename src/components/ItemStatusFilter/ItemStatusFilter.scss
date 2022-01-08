@@ -27,12 +27,12 @@
       background-color: #444;
       box-shadow: 0 0 8px rgba($color: #000, $alpha: 0.2);
     }
-    &:focus {
+
+    &.btn--active {
       color: #fff;
       border: 1px solid $header-color;
       background-color: $header-color;
       box-shadow: 0 0 12px rgba($color: #000, $alpha: 0.3);
     }
-
   }
 }
