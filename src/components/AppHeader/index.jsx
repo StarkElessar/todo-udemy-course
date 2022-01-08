@@ -7,7 +7,7 @@ const AppHeader = () => {
     <header className="header">
       <div className="container">
         <div className="header__logo">
-          <img className="header__logo-img" src={logo} alt="logo" />
+          <img className="header__logo-img" src={`.${logo}`} alt="logo" />
         </div>
         <span className="header__title">Todo App</span>
       </div>
