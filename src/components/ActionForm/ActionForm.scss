@@ -4,7 +4,8 @@
   &__input {
     flex: 0 1 85%;
     height: 40px;
-    font-size: 24px;
+    margin-right: 16px;
+    font-size: 18px;
     padding: 0 8px;
     border: 1px solid $header-color;
     border-radius: 4px;
@@ -14,7 +15,7 @@
     padding: 0 16px;
     height: 40px;
     line-height: 40px;
-    font-size: 16px;
+    font-size: 12px;
     text-transform: uppercase;
     color: #fff;
     border: 0;

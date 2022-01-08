@@ -1,20 +1,19 @@
-import React, { Component } from "react";
-import ActionForm from "../ActionForm";
-import AppTitle from "../AppTitle";
-import ItemStatusFilter from "../ItemStatusFilter";
-import SearchPanel from "../SearchPanel";
-import TodoList from "../TodoList";
-import AppHeader from "./../AppHeader";
+import React, { Component } from "react"
+import ActionForm from "../ActionForm"
+import AppTitle from "../AppTitle"
+import ItemStatusFilter from "../ItemStatusFilter"
+import SearchPanel from "../SearchPanel"
+import TodoList from "../TodoList"
+import AppHeader from "./../AppHeader"
+import IsEmptyTitle from "./../IsEmptyTitle"
 import './App.scss'
 
 export default class App extends Component {
   maxId = 100
   state = {
     todoData: [
-      this.createTodoItem('Drink Coffee'),
-      this.createTodoItem('Create React App'),
-      this.createTodoItem('Make Awesome App'),
-      this.createTodoItem('Have a lunch'),
+      this.createTodoItem('Начните создавать Ваш список дел..'),
+      this.createTodoItem('Просто запишите Ваше дело и нажмите "Планировать"'),
     ],
     term: '',
     filter: 'all' // active, all, done
@@ -130,6 +129,7 @@ export default class App extends Component {
     )
     const doneCount = todoData.filter((item) => item.done).length
     const todoCount = todoData.length - doneCount
+    
 
     return (
       <div className="app__wrapper">
@@ -144,12 +144,17 @@ export default class App extends Component {
         </div>
 
         <div className="container">
-          <TodoList
-            todos={visibleItems}
-            onDeleted={this.onDeletedItem}
-            onToggleImportant={this.onToggleImportant}
-            onToggleDone={this.onToggleDone}
-          />
+          {
+            todoData.length <= 0
+            ? <IsEmptyTitle />
+            : <TodoList
+                todos={visibleItems}
+                onDeleted={this.onDeletedItem}
+                onToggleImportant={this.onToggleImportant}
+                onToggleDone={this.onToggleDone}
+              />
+          }
+          
         </div>
         
         <ActionForm onItemAdded={this.onAddedItem} />

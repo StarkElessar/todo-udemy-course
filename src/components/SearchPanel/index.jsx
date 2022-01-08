@@ -14,9 +14,10 @@ export default class SearchPanel extends Component {
   render() {
     return (
       <input
+        title="Поле для поиска существующих дел"
         className="search-panel"
         type="text"
-        placeholder="type to search"
+        placeholder="Найти дела.."
         value={this.state.term}
         onChange={this.onSearchChange}
       />

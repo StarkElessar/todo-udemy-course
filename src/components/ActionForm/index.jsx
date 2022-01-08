@@ -26,13 +26,21 @@ export default class ActionForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit} className="action-form container">
-        <input type="text"
+        <input
+          title='Поле для добавления задачи в список'
+          type="text"
           onChange={this.onLabelChange}
           value={this.state.label}
           className="action-form__input"
-          placeholder="What needs to be done"
+          placeholder="Вы, что то планируете?"
         />
-        <button disabled={isDisabled} className={`action-form__btn ${buttonDisabled}`}>Add Todo</button>
+        <button
+          title='Нажмите эту кнопку, чтобы добавить задачу в список'
+          disabled={isDisabled}
+          className={`action-form__btn ${buttonDisabled}`}
+        >
+          Планировать
+        </button>
       </form>
     )
   }

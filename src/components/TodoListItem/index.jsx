@@ -22,10 +22,12 @@ export default class TodoListItem extends Component {
           {label}
         </span>
         <Button
+          titleText='Нажмите, чтобы удалить дело из списка'
           onHundler={ onDeleted }
           iconClass='btn btn__delete'
           icon='delete' />
         <Button
+          titleText='Нажмите, чтобы придать важности этому делу'
           onHundler={ onToggleImportant }
           iconClass='btn btn__priority'
           icon='priority_high' />
