@@ -79,6 +79,7 @@ export default class App extends Component {
       }
     })
   }
+  
   onToggleImportant = (id) => {
     this.setState(({ todoData }) => {
       return {

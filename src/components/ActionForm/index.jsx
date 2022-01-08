@@ -21,6 +21,9 @@ export default class ActionForm extends Component {
   }
 
   render() {
+    const isDisabled = this.state.label === ''
+    const buttonDisabled = isDisabled ? 'action-form__btn--disabled' : ''
+
     return (
       <form onSubmit={this.onSubmit} className="action-form container">
         <input type="text"
@@ -29,7 +32,7 @@ export default class ActionForm extends Component {
           className="action-form__input"
           placeholder="What needs to be done"
         />
-        <button className="action-form__btn">Add Todo</button>
+        <button disabled={isDisabled} className={`action-form__btn ${buttonDisabled}`}>Add Todo</button>
       </form>
     )
   }
